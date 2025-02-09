@@ -5,8 +5,6 @@
     --blue: #010B51;
     --grey: #6A696E;
     --back: #2E2C36;
-
-    /* 300 700 */
     --mainSource: "PT Sans", serif;
     --secondarySource: "Ubuntu", serif;
 }
@@ -37,7 +35,7 @@ a{
     height: 6rem;
     width: 100%;
     position: fixed;
-    z-index: 1000; /* Asegura que quede encima de otros elementos */
+    z-index: 1000;
     background-color: var(--primary);
 }
 /* LOGO */
@@ -109,9 +107,7 @@ a{
     border: none;
     background-color: var(--white);
     border-radius: .5rem;
-    width: 10rem;
     height: 2.5rem;
-    text-align: center;
     font-size: 1.5rem;
 }
 .option, 
@@ -123,9 +119,8 @@ a{
     margin: 1.5rem 0;
 }
 .input.navigation__search{
-    flex-grow: 1;
+    /* flex-grow: 1; */
     width: 300%;
-    /* width: 80rem; */
     height: 3.5rem;
     border-radius: .5rem;
     outline: none;
@@ -138,7 +133,7 @@ a{
     cursor: pointer;
 }
 .button.navigation__search{
-    width: 15rem;
+    width: 5rem;
 }
 /* PRODUCTS */
 .products{
@@ -193,7 +188,7 @@ a{
     cursor: pointer;
 }
 /* MEDIA */
-@media (min-width: 414px) {
+@media (min-width: 366px) {
     .title{
         font-size: 4rem;
     }
@@ -204,13 +199,16 @@ a{
         margin-top: 0;
     }
 }
+@media (min-width: 720px) {
+    .navigation__right{
+        padding-right: 3rem;
+        gap: 2rem;
+        justify-content: center;
+    }
+}
 @media (min-width: 920px) {
     .products{
         grid-template-columns: repeat(3, 1fr);
-    }
-    .navigation__right{
-        gap: 2rem;
-        justify-content: center;
     }
 }
 @media (min-width: 1025px) {
